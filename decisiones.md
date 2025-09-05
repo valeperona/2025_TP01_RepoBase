@@ -13,3 +13,10 @@
 - Commit 2: `docs(linecount): documenta ejemplo en README`.  
   👉 Commit separado: documentación no mezclada con código.
 - Justificación: mantener cambios claros, fáciles de revisar o revertir.
+## Hotfix en producción y propagación
+- Bug simulado en `main`: commit con texto erróneo en README.
+- Hotfix: rama `hotfix/readme-bug`, commit de corrección.
+- Integración a `main`: `git merge --no-ff` → deja registro explícito del hotfix.
+- Propagación a `feature/mi-funcionalidad`: `git cherry-pick <hash>` del fix.
+- Justificación: cherry-pick me permitió traer solo el fix sin arrastrar otros cambios de `main`.
+
